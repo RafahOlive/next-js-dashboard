@@ -1,4 +1,5 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, Input, Icon } from "@chakra-ui/react";
+import { RiSearchEyeLine } from 'react-icons/ri'
 
 export default function Header(){
     return(
@@ -12,7 +13,19 @@ export default function Header(){
                 <Text as="span" marginLeft="1" color="pink.500">.</Text>
             </Text>
 
-            <Flex as="label" flex="1" paddingY="4" paddingX="8">
+            <Flex as="label" flex="1" paddingY="4" paddingX="8"
+            marginLeft="6" maxWidth={400} alignSelf="center" color="gray.200"
+            position="relative" bg="gray.800" borderRadius="full"
+            >
+
+                <Input color="gray.50" variant="unstyled"
+                placeholder="Buscar na plataforma"
+                paddingX="4"
+                marginX="4"
+                _placeholder={{color:'gray.400'}}
+                />
+
+                <Icon as={RiSearchEyeLine} fontSize="20"/>
 
             </Flex>
         </Flex>
